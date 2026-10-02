@@ -12,7 +12,7 @@ Le but de cette expérimentation est d'évaluer la pertinence des rubriques, des
 ## Comment contribuer ?
 
 > [!NOTE]
-> Si vous n'avez pas les droits d'accès sur ce dépôt, ou avez une question, vous pouvez ouvrir une [issue](issues) pour demander.
+> Si vous n'avez pas les droits d'accès sur ce dépôt, ou avez une question, vous pouvez ouvrir une [issue](https://github.com/umrlastig/dtt-recipes-store/issues) pour demander.
 > 
 > Si vous ne souhaitez pas utiliser GitHub pour contribuer, vous pouvez toujours suivre les instructions en conservant votre fichier sur votre ordinateur, puis me l'envoyer par mail une fois fini à l'adresse `theo(point)szanto(arobase)ign(point)fr`
 
