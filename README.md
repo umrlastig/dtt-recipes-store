@@ -12,11 +12,11 @@ Le but de cette expérimentation est d'évaluer la pertinence des rubriques, des
 ## Comment contribuer ?
 
 > [!NOTE]
-> Si vous n'avez pas les droits d'accès sur ce dépôt, ou avez une question, vous pouvez ouvrir une issue pour demander.
+> Si vous n'avez pas les droits d'accès sur ce dépôt, ou avez une question, vous pouvez ouvrir une [issue](issues) pour demander.
 > 
 > Si vous ne souhaitez pas utiliser GitHub pour contribuer, vous pouvez toujours suivre les instructions en conservant votre fichier sur votre ordinateur, puis me l'envoyer par mail une fois fini à l'adresse `theo(point)szanto(arobase)ign(point)fr`
 
-Pour partager vos connaissances, créez une copie du fichier [`recipe.md`](recipe.md) à la racine de ce dépôt, puis remplissez-là en suivant les consignes décrites dans ce README (la description de chaque rubriqe et annotation se trouve ci-dessous).
+Pour partager vos connaissances, créez une copie du fichier [`recipe.md`](recipe.md) à la racine de ce dépôt, puis remplissez-la en suivant les consignes décrites dans ce README (la description de chaque rubriqe et annotation se trouve ci-dessous).
 
 > [!IMPORTANT]
 > Merci de ne pas éditer directement le fichier `recipe.md` et de bien en faire une copie !!!
@@ -30,7 +30,19 @@ Merci !
 
 ---
 
-# Rubriques et annotations d'un recette
+# Rubriques et annotations d'une recette
+
+- [Contexte](#contexte)
+- [Acteurs / Partenaires](#acteurs--partenaires)
+- [Identification des sources de données](#identification-des-sources-de-données)
+- [Processus](#processus)
+- [Problèmes](#problèmes)
+- [Utilisation des données ou du modèle numérique](#utilisation-des-données-ou-du-modèle-numérique)
+- [Recommandations](#recommandations)
+- [Perspectives](#perspectives)
+- [Annexes](#annexes)
+- [Glossaire](#glossaire)
+- [Annotations proposées](#annotations-proposées)
 
 ## Contexte
 
@@ -42,7 +54,7 @@ _Cette rubrique décrit les enjeux du monde réel et le modèle numérique envis
 - `funding` : Information sur le financement / projet
 - `digital-model` : Type de modèle numérique visé
 
-> **Exemple :**
+**Exemple :**
 > Ce projet vise à #[stake: améliorer l'aménagement du réseau cyclable] dans la #[territory: ville de Loos-en-Gohelle]. Il est financé par le projet #[funding: CityFAB]. Une #[digital-model: représentation 3D de la ville dans Luanti] a été créée dans le but d'organiser une concertation citoyenne pour recueillir l'avis des citoyens sur plusieurs propositions d'aménagement.
 
 ## Acteurs / Partenaires
@@ -54,7 +66,7 @@ _Cette rubrique décrit des acteurs et partenaires impliqués dans le processus 
 - `role` : Rôle au sein de ce JNT (commanditaire, ingénieur…)
 - `expertise` : Expertise(s) possédée(s) par l'acteur (aussi bien expertise locale que scientifique) qui sont utiles dans le cadre de ce JNT
 
-> **Exemple :**
+**Exemple :**
 > Théo SZANTO (*), #[profile: doctorant en géomatique au LASTIG], a joué le rôle d'#[role: ingénieur JNT]. Ses compétences mises en œuvre ont été #[skill: expert en données IGN] et #[skill: expert et développeur Luanti].
 > 
 > Mathilde XX, #[profile: membre de l'équipe municipale de Loos-en-Gohelle], #[role: ingénieure JNT]. #[skill: connaissance du territoire concerné], #[skill: informatique bureautique].
@@ -74,7 +86,7 @@ _Cette rubrique décrit le travail d'identification des sources de données cons
 - `dataset` : données
 - `documentation` : Usage de la documentation et des métadonnées (si possible avec lien)
 
-> **Exemple :**
+**Exemple :**
 > Les données de base proviennent de la #[dataset: BD TOPO (*)] de l'IGN. Les couches utilisées sont les bâtiments, les routes, et les cours d'eau. #[documentation: L'outil bdtopoexplorer.ign.fr s'est montré utile pour comprendre les attributs disponibles, notamment sur les bâtiments].
 > 
 > Le #[dataset: Nuages de Points LiDAR HD (*)] également de l'IGN a servi pour le relief des toits et la végétation.
@@ -95,7 +107,7 @@ _Cette rubrique décrit les étapes du processus, les traitements réalisés, sa
 - `output` : Résultat(s) en sortie
 - `expertise` : Expertise(s) nécessaire(s) pour réaliser ce traitement
 
-> **Exemple :**
+**Exemple :**
 > La première étape a été l'#[process: import des données BD TOPO]. Après téléchargement de #[input: la BD TOPO sur le département au format GeoPackage], #[tool: QGIS] a été utilisé pour extraire #[output: un GeoPackage sur la zone d'intérêt]. Des #[expertise: connaissances SIG de base] ont été nécessaires.
 > 
 > Ensuite, il a fallu #[process: extraction des points de végétation du nuage de points LiDAR HD]. Pour cela, une pipeline #[tool: PDAL] a été développée (voir annexe 1). Elle transforme les #[input: tuiles kilométriques LAZ classifiées] en #[output: un seul fichier LAZ avec seulement les classes de végétation]. Il a été nécessaire de maîtriser #[expertise: les pipelines PDAL] et #[expertise: la notation JSON].
@@ -108,7 +120,7 @@ _Cette rubrique décrit des problèmes rencontrés, sans viser l'exhaustivité, 
 - `problem` : problème (manque de documentation…)
 - `solution` : Solution mise en œuvre (si elle existe)
 
-> **Exemple :**
+**Exemple :**
 > Un problème d'#[problem: alignement des données] a été constaté entre les bâtiments de la #[dataset: BD TOPO] et le nuage de point #[dataset: LiDAR HD]. Pour combiner proprement les deux, #[solution : le logiciel #[tool: Roofer] a été utilisé].
 > 
 > Un problème de #[problem: qualité des données] concernant la #[dataset: BD TOPO] : l'attribut "materiaux_des_murs" n'était pas toujours rempli, rendantimpossible son utilisation pour un rendu visuel. L'alternative a été d'#[solution: utiliser une palette symbolique selon l'attribut "usage_1"], lui obligatoire.
@@ -122,7 +134,7 @@ _Description de l'utilisation des résultats des traitements décrits précédem
 **Annotation conseillée :**
 - `environnement` : Environnement logiciel
 
-> **Exemple :**
+**Exemple :**
 > Le modèle numérique produit s'utilise dans #[environment: Luanti]. Il représente la ville de Loos-en-Gohelle et permet à un utilisateur connaissant déjà le territoire de reconnaître les lieux, pour s'y repérer soit en vue immersive, soit en survol de la zone.
 
 ## Recommandations
